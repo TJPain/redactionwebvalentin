@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "octref.vetur",
+    "voorjaar.windicss-intellisense",
+    "eamodio.gitlens",
+    "IronGeek.vscode-env",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}
