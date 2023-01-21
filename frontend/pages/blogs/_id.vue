@@ -27,29 +27,36 @@
         </p>
       </div>
     </div>
-    <div class="uk-section">
+    <div p="t-15 b-5">
       <div class="uk-container uk-container-small">
-        <div v-if="blog.data.attributes.content" id="editor" v-html="$md.render(blog.data.attributes.content)" />
-        <p v-if="blog.data.publishedAt">
+        <div v-if="blog.data.attributes.content" id="editor" m="b-8" v-html="$md.render(blog.data.attributes.content)" />
+        <p v-if="blog.data.publishedAt" m="b-8">
           {{ blog.data.attributes.publishedAt }}
         </p>
       </div>
     </div>
+    <CategoriesList :categories="categories" :blog-page="true" />
   </div>
 </template>
 
 <script>
 import blogQuery from '~/apollo/queries/blog/blog'
+import categoriesQuery from '~/apollo/queries/category/categories'
 import BreadCrumb from '~/components/global/BreadCrumb.vue'
+import CategoriesList from '~/components/blog/CategoriesList.vue'
 
 export default {
   components: {
-    BreadCrumb
+    BreadCrumb,
+    CategoriesList
   },
   data () {
     return {
       api_url: process.env.strapiBaseUri,
       blog: {
+        data: []
+      },
+      categories: {
         data: []
       }
     }
@@ -64,6 +71,10 @@ export default {
       variables () {
         return { id: parseInt(this.$route.params.id) }
       }
+    },
+    categories: {
+      prefetch: true,
+      query: categoriesQuery
     }
   }
 }
