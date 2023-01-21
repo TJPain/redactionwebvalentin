@@ -1,0 +1,26 @@
+query {
+  blogs {
+    data {
+      id
+      attributes {
+        title
+        subtitle
+        content
+        image {
+          data {
+            attributes {
+              url
+            }
+          }
+        }
+        category {
+          data {
+            attributes {
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+}

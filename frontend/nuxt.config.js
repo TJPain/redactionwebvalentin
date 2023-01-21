@@ -29,11 +29,13 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    'uikit/dist/css/uikit.min.css',
     '~assets/styles/global.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins/uikit.js', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -43,12 +45,14 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
-    'nuxt-windicss'
+    'nuxt-windicss',
+    '@nuxtjs/date-fns'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/apollo'
+    '@nuxtjs/apollo',
+    '@nuxtjs/markdownit'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -62,5 +66,12 @@ export default {
         httpEndpoint: process.env.BACKEND_URL || 'http://localhost:1337/graphql'
       }
     }
+  },
+
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    injected: true
   }
 }

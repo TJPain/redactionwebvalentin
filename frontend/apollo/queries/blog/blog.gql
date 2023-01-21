@@ -1,0 +1,20 @@
+query Blogs($id: ID!) {
+  blog(id: $id) {
+    data {
+      id
+      attributes {
+        title
+        subtitle
+        content
+        image {
+          data {
+            attributes {
+              url
+            }
+          }
+        }
+        publishedAt
+      }
+    }
+  }
+}
