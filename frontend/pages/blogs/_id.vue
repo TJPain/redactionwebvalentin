@@ -11,10 +11,7 @@
     </div>
     <div class="uk-section">
       <div class="uk-container uk-container-small">
-        <!-- <div v-if="blog.data.attributes.content" id="editor">
-          {{ blog.data.attributes.content }}
-        </div> -->
-        <div v-if="blog.content" id="editor" v-html="$md.render(article.content)" />
+        <div v-if="blog.data.attributes.content" id="editor" v-html="$md.render(blog.data.attributes.content)" />
         <p v-if="blog.data.publishedAt">
           {{ blog.data.attributes.publishedAt }}
         </p>
@@ -24,7 +21,7 @@
 </template>
 
 <script>
-import blogsQuery from '~/apollo/queries/blog/blogs'
+import blogQuery from '~/apollo/queries/blog/blog'
 
 export default {
   data () {
@@ -36,9 +33,9 @@ export default {
     }
   },
   apollo: {
-    blo: {
+    blog: {
       prefetch: true,
-      query: blogsQuery,
+      query: blogQuery,
       variables () {
         return { id: parseInt(this.$route.params.id) }
       }
@@ -46,3 +43,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  a {
+    color: #0F766E !important
+  }
+</style>
