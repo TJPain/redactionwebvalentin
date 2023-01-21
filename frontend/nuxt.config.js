@@ -52,7 +52,8 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/apollo',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    'vue-scrollto/nuxt'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

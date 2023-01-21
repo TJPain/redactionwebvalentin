@@ -14,13 +14,19 @@
       <div id="navbar-default" class="hidden w-full md:block md:w-auto">
         <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-base md:font-medium md:border-0 md:bg-white" m="b-0">
           <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-dark-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0" aria-current="page">Qui Suis-Je</a>
+            <button v-scroll-to="{ element: '#qui' }" class="block py-2 pl-3 pr-4 text-dark-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0">
+              Qui Suis-Je
+            </button>
           </li>
           <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-dark-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0">Avez-Vous Le Bon Profil ?</a>
+            <button v-scroll-to="{ element: '#bonProfil' }" class="block py-2 pl-3 pr-4 text-dark-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0">
+              Avez-Vous Le Bon Profil ?
+            </button>
           </li>
           <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-dark-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0">Services</a>
+            <button v-scroll-to="{ element: '#services' }" class="block py-2 pl-3 pr-4 text-dark-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0">
+              Services
+            </button>
           </li>
           <li>
             <NuxtLink to="/blog" class="block py-2 pl-3 pr-4 text-dark-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0">
