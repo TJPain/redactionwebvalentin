@@ -1,22 +1,27 @@
 <template>
-  <div>
-    <client-only>
-      <div class="uk-section">
-        <div v-if="getCategory" class="uk-container uk-container-large">
-          <h1>{{ category.data.attributes.name }}</h1>
-          <!-- <Articles :articles="category.data.attributes.articles" /> -->
-        </div>
-      </div>
-    </client-only>
-  </div>
+  <section v-if="getCategory">
+    <div
+      max-w="300"
+      w="full"
+      min-h="100"
+      m="x-auto"
+      p="8 md:15"
+    >
+      <h1 font="bold" text="dark-600 4xl md:5xl center" m="b-10">
+        {{ category.data.attributes.name }}
+      </h1>
+      <BlogList :blogs="category.data.attributes.blogs" />
+    </div>
+  </section>
 </template>
 
 <script>
 import blogsQuery from '~/apollo/queries/blog/blogs-categories'
-// import Articles from '~/components/Articles'
+import BlogList from '~/components/blog/BlogList.vue'
+
 export default {
   components: {
-    // Articles
+    BlogList
   },
   data () {
     return {

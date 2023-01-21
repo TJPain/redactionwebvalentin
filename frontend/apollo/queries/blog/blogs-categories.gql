@@ -1,13 +1,15 @@
     query Categories($id: ID!){
       category(id: $id) {
         data {
+          id
           attributes {
             name
             blogs {
-              id
               data {
+                id
                 attributes {
                   title
+                  subtitle
                   content
                   image {
                     data {
@@ -18,6 +20,7 @@
                   }
                   category {
                     data {
+                      id
                       attributes {
                         name
                       }

@@ -2,7 +2,6 @@
   <div v-if="getBlog">
     <BreadCrumb
       :items=" [
-        { name: 'Home', href: '/' },
         { name: 'Blog', href: '/blog' },
         { name: getBlog.attributes.category.data.attributes.name, href: `/categories/${getBlog.attributes.category.data.id}` },
         { name: getBlog.attributes.title }
