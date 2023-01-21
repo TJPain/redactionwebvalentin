@@ -10,7 +10,7 @@
       justify="center"
       p="8 md:15"
     >
-      <h1 font="bold" text="white 5xl md:6xl">
+      <h1 font="bold" text="white center 5xl md:6xl">
         Une écriture éthique et ouverte sur le monde
       </h1>
     </div>

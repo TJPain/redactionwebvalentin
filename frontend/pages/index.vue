@@ -1,5 +1,8 @@
 <template>
-  <HomeHeroBanner />
+  <div>
+    <HomeHeroBanner />
+    <HomeHeroText />
+  </div>
 </template>
 
 <script lang="ts">
