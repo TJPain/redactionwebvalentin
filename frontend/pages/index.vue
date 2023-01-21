@@ -1,5 +1,5 @@
 <template>
-  <Tutorial />
+  <HomeHeroBanner />
 </template>
 
 <script lang="ts">
