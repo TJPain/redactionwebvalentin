@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="getBlog">
     <div
       v-if="blog.data.attributes.image.data"
       id="banner"
@@ -31,6 +31,9 @@ export default {
       },
       api_url: process.env.strapiBaseUri
     }
+  },
+  computed: {
+    getBlog () { return this.blog.data.attributes ? this.blog.data : null }
   },
   apollo: {
     blog: {

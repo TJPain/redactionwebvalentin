@@ -4,7 +4,7 @@
       <div class="uk-section">
         <div class="uk-container uk-container-large">
           <h1>{{ category.data.attributes.name }}</h1>
-          <!-- <BlogList :articles="category.data.attributes.articles" /> -->
+          <!-- <Articles :articles="category.data.attributes.articles" /> -->
         </div>
       </div>
     </client-only>
@@ -12,17 +12,18 @@
 </template>
 
 <script>
-import blogsQuery from '~/apollo/queries/blog/blog-categories'
-// import BlogList from '~/components/blog/BlogList.vue'
+import blogsQuery from '~/apollo/queries/blog/blogs-categories'
+// import Articles from '~/components/Articles'
 export default {
   components: {
-    // BlogList
+    // Articles
   },
   data () {
     return {
       category: {
         data: []
-      }
+      },
+      api_url: process.env.strapiBaseUri
     }
   },
   apollo: {
