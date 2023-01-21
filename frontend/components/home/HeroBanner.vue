@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import heroImg from 'assets/images/home/hero-image-alt.jpg'
+import heroImg from 'assets/images/home/hero-image.jpg'
 
 export default {
   data () {
