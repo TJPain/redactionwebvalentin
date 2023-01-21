@@ -17,6 +17,7 @@
       image="home/singer.jpg"
       :reversed="true"
     />
+    <HomeServicesCarousel />
   </div>
 </template>
 
