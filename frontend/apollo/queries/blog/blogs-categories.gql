@@ -1,4 +1,4 @@
-    query Category($id: ID!){
+    query Categories($id: ID!){
       category(id: $id) {
         data {
           attributes {

@@ -13,6 +13,14 @@ query Blogs($id: ID!) {
             }
           }
         }
+        category {
+          data {
+            id
+            attributes {
+              name
+            }
+          }
+        }
         publishedAt
       }
     }

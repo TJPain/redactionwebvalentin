@@ -1,9 +1,11 @@
 <template>
   <nav
     class="bg-white border-gray-200 rounded fixed"
-    w="full"
     z="100"
     p="x-5 md:x-10 y-2.5"
+    w="full"
+    max-w="500"
+    m="x-auto"
   >
     <div class="flex flex-wrap items-center justify-between mx-auto">
       <NuxtLink to="/" class="flex items-center">

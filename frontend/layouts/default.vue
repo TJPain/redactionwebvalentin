@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div max-w="500" m="x-auto">
     <NavBar />
     <div p="t-15">
       <Nuxt />
