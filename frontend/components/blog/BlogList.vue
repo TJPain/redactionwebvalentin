@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section max-w="300" w="full" m="x-auto y-8 md:y-15" p="x-5 md:x-10">
     <div class="uk-child-width-1-2" uk-grid>
       <div>
         <router-link
@@ -70,7 +70,8 @@
         </div>
       </div>
     </div>
-  </div>
+    </div>
+  </section>
 </template>
 
 <script>
