@@ -1,6 +1,7 @@
 html {
   font-family: 'Montserrat', sans-serif;
   color: #1C1C1E;
+  overflow-y: scroll;
 }
 
 a, a:hover {
