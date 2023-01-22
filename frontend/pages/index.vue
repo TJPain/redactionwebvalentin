@@ -24,7 +24,9 @@
     <div id="services">
       <HomeServicesCarousel />
     </div>
-    <HomeContactMe />
+    <div id="contactez">
+      <HomeContactMe />
+    </div>
   </div>
 </template>
 
@@ -32,6 +34,19 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'IndexPage'
+  name: 'IndexPage',
+  mounted () {
+    if (this.$route.hash) {
+      this.scrollToHash()
+    }
+  },
+  methods: {
+    scrollToHash () {
+      const hash = this.$route.hash
+      this.$nextTick(() => {
+        this.$scrollTo(hash, 0, { offset: -120 })
+      })
+    }
+  }
 })
 </script>
