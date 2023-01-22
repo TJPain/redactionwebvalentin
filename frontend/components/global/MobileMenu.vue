@@ -23,9 +23,9 @@
           </a>
         </li>
         <li>
-          <NuxtLink to="/blog" class="block py-2 pl-3 pr-4 text-dark-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0" @click="$emit('closeMobileMenu')">
+          <a href="/blog" class="block py-2 pl-3 pr-4 text-dark-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0" @click="$emit('closeMobileMenu')">
             Blog
-          </NuxtLink>
+          </a>
         </li>
         <li>
           <a href="/#contactez" class="block py-2 pl-3 pr-4 text-dark-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0" @click="$emit('closeMobileMenu')">
