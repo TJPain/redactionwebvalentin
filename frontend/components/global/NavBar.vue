@@ -72,10 +72,11 @@
           href="/#contactez"
           rounded="lg"
           bg="dark-600 hover:dark-100"
-          text="white"
+          text="white hover:white"
           font="semibold"
           p="y-2.5 x-4"
           class="hidden lg:block"
+          style="text-decoration: none"
         >
           Contactez Moi
         </a>
