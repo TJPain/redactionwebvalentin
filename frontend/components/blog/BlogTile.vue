@@ -26,7 +26,7 @@
             {{ blog.attributes.category.data.attributes.name }}
           </NuxtLink>
         </div>
-        <NuxtLink :to="{ name: 'blogs-id', params: { id: blog.id } }" style="text-decoration: none">
+        <NuxtLink :to="{ name: 'blog-id', params: { id: blog.id } }" style="text-decoration: none">
           <h4 text="white hover:white 2xl md:4xl" font="semibold" style="text-decoration: none" m="b-5">
             {{ blog.attributes.title }}
           </h4>
@@ -37,7 +37,7 @@
       </div>
       <div>
         <NuxtLink
-          :to="{ name: 'blogs-id', params: { id: blog.id } }"
+          :to="{ name: 'blog-id', params: { id: blog.id } }"
           border="2 white hover:teal-500"
           rounded="lg"
           p="x-5 y-2"
