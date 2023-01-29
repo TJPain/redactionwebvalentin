@@ -8,9 +8,9 @@
       p="8 md:15"
     >
       <h1 font="bold" text="dark-600 4xl md:5xl center" m="b-10">
-        {{ category.data.attributes.name }}
+        {{ categories.data[0].attributes.name }}
       </h1>
-      <BlogList :blogs="category.data.attributes.blogs" />
+      <BlogList :blogs="categories.data[0].attributes.blogs" />
     </div>
   </section>
 </template>
@@ -25,21 +25,21 @@ export default {
   },
   data () {
     return {
-      category: {
+      categories: {
         data: []
       },
       api_url: process.env.strapiBaseUri
     }
   },
   computed: {
-    getCategory () { return this.category.data.attributes ? this.category.data : null }
+    getCategory () { return this.categories.data[0].attributes ? this.categories.data : null }
   },
   apollo: {
-    category: {
+    categories: {
       prefetch: true,
       query: blogsQuery,
       variables () {
-        return { id: parseInt(this.$route.params.id) }
+        return { slug: this.$route.params.slug }
       }
     }
   }

@@ -1,9 +1,12 @@
-    query Categories($id: ID!){
-      category(id: $id) {
+    query Categories($slug: String!){
+      categories(filters: { slug: { eq: $slug } }) {
         data {
           id
           attributes {
+            slug
             name
+            metaTitle
+            metaDescription
             blogs {
               data {
                 id
@@ -22,7 +25,10 @@
                     data {
                       id
                       attributes {
+                        slug
                         name
+                        metaTitle
+                        metaDescription
                       }
                     }
                   }

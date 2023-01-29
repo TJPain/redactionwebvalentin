@@ -3,7 +3,10 @@ query {
     data {
       id
       attributes {
+        slug
         name
+        metaTitle
+        metaDescription
       }
     }
   }
