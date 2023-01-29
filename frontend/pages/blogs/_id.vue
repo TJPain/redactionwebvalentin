@@ -3,7 +3,7 @@
     <BreadCrumb
       :items=" [
         { name: 'Blog', href: '/blog' },
-        { name: getBlog.attributes.category.data.attributes.name, href: `/categories/${getBlog.attributes.category.data.id}` },
+        { name: getBlog.attributes.category.data.attributes.name, href: `/tag/${getBlog.attributes.category.data.id}` },
         { name: getBlog.attributes.title }
       ]"
     />

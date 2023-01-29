@@ -14,7 +14,7 @@
         <div w="full" m="b-5">
           <NuxtLink
             v-if="blog.attributes.category.data"
-            :to="{ name: 'categories-id', params: { id: blog.attributes.category.data.id } }"
+            :to="{ name: 'tag-id', params: { id: blog.attributes.category.data.id } }"
             bg="teal-600 hover:teal-500"
             text="sm white hover:white"
             p="x-6 y-1.5"
