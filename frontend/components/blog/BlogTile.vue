@@ -47,7 +47,7 @@
           bg="hover:teal-500"
           class="transition-all duration-300 ease-in-out"
         >
-          Read more
+          Lisez-moi
         </NuxtLink>
       </div>
     </div>
