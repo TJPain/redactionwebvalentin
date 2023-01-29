@@ -13,6 +13,7 @@
                 attributes {
                   title
                   subtitle
+                  slug
                   content
                   image {
                     data {

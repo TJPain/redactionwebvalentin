@@ -1,15 +1,15 @@
 <template>
-  <div v-if="getBlog">
+  <div v-if="getBlog[0]">
     <BreadCrumb
       :items=" [
         { name: 'Blog', href: '/blog' },
-        { name: getBlog.attributes.category.data.attributes.name, href: `/tag/${getBlog.attributes.category.data.id}` },
-        { name: getBlog.attributes.title }
+        { name: getBlog[0].attributes.category.data.attributes.name, href: `/tag/${getBlog[0].attributes.category.data.attributes.slug}` },
+        { name: getBlog[0].attributes.title }
       ]"
     />
     <div w="full" h="155" p="x-5 md:x-10">
       <div
-        :style="{ backgroundImage: `linear-gradient(0deg, rgba(17,17,17,0.60) 0%, rgba(17,17,17,0.60) 100%), url(${api_url + blogs.data[0].attributes.image.data.attributes.url})`}"
+        :style="{ backgroundImage: `linear-gradient(0deg, rgba(17,17,17,0.60) 0%, rgba(17,17,17,0.60) 100%), url(${blogs.data[0].attributes.image.data.attributes.url})`}"
         bg="cover"
         w="full"
         h="155"
@@ -61,7 +61,7 @@ export default {
     }
   },
   computed: {
-    getBlog () { return this.blogs.data[0].attributes ? this.blogs.data[0] : null }
+    getBlog () { return this.blogs.data ? this.blogs.data : null }
   },
   apollo: {
     blogs: {

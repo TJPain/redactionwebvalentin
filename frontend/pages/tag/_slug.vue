@@ -1,5 +1,5 @@
 <template>
-  <section v-if="getCategory">
+  <section v-if="getCategory[0]">
     <div
       max-w="300"
       w="full"
@@ -10,7 +10,7 @@
       <h1 font="bold" text="dark-600 4xl md:5xl center" m="b-10">
         {{ categories.data[0].attributes.name }}
       </h1>
-      <BlogList :blogs="categories.data[0].attributes.blogs" />
+      <BlogList :blogs="getCategory[0].attributes.blogs" />
     </div>
   </section>
 </template>
@@ -32,7 +32,7 @@ export default {
     }
   },
   computed: {
-    getCategory () { return this.categories.data[0].attributes ? this.categories.data : null }
+    getCategory () { return this.categories.data ? this.categories.data : null }
   },
   apollo: {
     categories: {

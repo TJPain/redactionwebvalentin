@@ -7,7 +7,7 @@
       <NuxtLink
         v-for="category in categories.data"
         :key="category.id"
-        :to="{ name: 'tag-slug', params: { slug: category.slug } }"
+        :to="{ name: 'tag-slug', params: { slug: category.attributes.slug } }"
         bg="teal-700 hover:teal-600"
         text="base white hover:white"
         :p="blogPage ? 'x-6 y-1.5' : 'x-8 y-2.5'"

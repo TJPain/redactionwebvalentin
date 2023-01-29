@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="blog.attributes.image.data"
-    :style="{ backgroundImage: `linear-gradient(0deg, rgba(17,17,17,0.60) 0%, rgba(17,17,17,0.60) 100%), url(${api_url + blog.attributes.image.data.attributes.url})`}"
+    :style="{ backgroundImage: `linear-gradient(0deg, rgba(17,17,17,0.60) 0%, rgba(17,17,17,0.60) 100%), url(${blog.attributes.image.data.attributes.url})`}"
     bg="cover"
     position="relative"
     w="full"
@@ -14,7 +14,7 @@
         <div w="full" m="b-5">
           <NuxtLink
             v-if="blog.attributes.category.data"
-            :to="{ name: 'tag-id', params: { id: blog.attributes.category.data.id } }"
+            :to="{ name: 'tag-slug', params: { slug: blog.attributes.category.data.attributes.slug } }"
             bg="teal-600 hover:teal-500"
             text="sm white hover:white"
             p="x-6 y-1.5"
@@ -37,7 +37,7 @@
       </div>
       <div>
         <NuxtLink
-          :to="{ name: 'blog-id', params: { id: blog.id } }"
+          :to="{ name: 'blog-slug', params: { slug: blog.attributes.slug } }"
           border="2 white hover:teal-500"
           rounded="lg"
           p="x-5 y-2"
@@ -60,11 +60,6 @@ export default {
     blog: {
       type: Object,
       required: true
-    }
-  },
-  data () {
-    return {
-      api_url: process.env.strapiBaseUri
     }
   }
 }
