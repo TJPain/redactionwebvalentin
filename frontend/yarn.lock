@@ -9586,6 +9586,7 @@ nuxt-windicss@^2:
     pathe "^1.0.0"
     read-cache "^1.0.0"
     sirv "^2.0.2"
+    vite-plugin-windicss "^1.8.8"
     windicss "^3.5.6"
     windicss-analysis "^0.3.5"
     windicss-webpack-plugin "^1.7.7"
@@ -13042,6 +13043,16 @@ vendors@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/vendors/-/vendors-1.0.4.tgz#e2b800a53e7a29b93506c3cf41100d16c4c4ad8e"
   integrity sha512-/juG65kTL4Cy2su4P8HjtkTxk6VmJDiOPBufWniqQ6wknac6jNiXS9vU+hO3wgusiyqWlzTbVHi0dyJqRONg3w==
+
+vite-plugin-windicss@^1.8.8:
+  version "1.8.10"
+  resolved "https://registry.yarnpkg.com/vite-plugin-windicss/-/vite-plugin-windicss-1.8.10.tgz#a0e022c5d3def185fb2458a0ba41fc140421ddcb"
+  integrity sha512-scywsuzo46lcTBohspmF0WiwhWEte6p+OUVrX4yr7VMRvLHMHVfLtJReyD5pppjijG7YOwVsZn7XBWWZtF658Q==
+  dependencies:
+    "@windicss/plugin-utils" "1.8.10"
+    debug "^4.3.4"
+    kolorist "^1.6.0"
+    windicss "^3.5.6"
 
 vm-browserify@^1.0.1:
   version "1.1.2"
