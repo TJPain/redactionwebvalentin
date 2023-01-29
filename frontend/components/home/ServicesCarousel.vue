@@ -21,7 +21,7 @@
         <h4 font="semibold" text="dark-600 xl md:2xl center md:left" m="b-5">
           Traduction
         </h4>
-        <p text="center md:left" m="b-5">
+        <p text="center md:left" m="b-5 md:b-10">
           Je vous aide à étendre votre présence en ligne aux secteurs francophones.
         </p>
         <p text="center md:left" m="b-5">

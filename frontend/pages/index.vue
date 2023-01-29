@@ -1,7 +1,7 @@
 <template>
   <div>
     <HomeHeroBanner />
-    <HomeHeroText hero-text="Jeune homme authentique à la recherche de nouvelles aventures, Valentin à votre service!" />
+    <HomeHeroText />
     <div id="qui">
       <HomeTextImgGrid
         title="Qui suis-je ?"
